@@ -9,5 +9,5 @@ int main()
     scanf("%lf %lf", &num1,&num2);
     printf("%.4lf ",num1*num2);
     return 0;
-
+    
 }

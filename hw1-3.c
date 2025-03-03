@@ -3,14 +3,21 @@
 
 int main()
 {
-    double x;
-    double y;
+    double x, y;
     int z;
+    //double y;
+    
+    //sol 1 
+    double ans = round((x * y) * pow(10, z)) / pow(10, z);
+    printf("%.lf\n",ans);
 
-    scanf("%lf %lf %d",&x,&y,&z);
-    double result = x * y;
-    double point = pow(10,z);
-    result = round(result*point)/point;
-    printf("%.*lf\n",z,result);
+    //sol 2 
+    //printf("%.*lf\n",z,x * y);
+
+    // scanf("%lf %lf %d",&x,&y,&z);
+    // double result = x * y;
+    // double point = pow(10,z);//10的z次方
+    // result = round(result*point)/point;
+    // printf("%.*lf\n",z,result);
 
 }
