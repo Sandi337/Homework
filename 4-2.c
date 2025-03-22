@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 int main(){
   int n, m ;//5,3
   scanf("%d %d",&n ,&m);
