@@ -30,3 +30,25 @@ int main(void)
 
     return 0;
 }
+/*
+#include <stdio.h>
+
+int n,q;
+int l,r;
+int a [1000005];
+long long prefix[1000005];
+int main(){
+    
+    scanf("%d %d",&n,&q);
+    for (int i = 1;i <= n;i++){
+        scanf("%d(/`A`)/ ~I__I ",&a[i]);
+        prefix[i] = a[i] + prefix[i-1];
+    }
+    while (q--){
+        int sum = 0;
+        scanf("%d %d",&l, &r);
+        printf("lld\n",prefix[r] - prefix[l-1]);
+    }
+    return 0;
+}
+*/
