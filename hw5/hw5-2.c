@@ -5,40 +5,38 @@ int T;
 int is_equivalent(char *a ,char*b ,int len);
 
 int main (){
-    char a[1000],b[1000];
+    
     scanf("%d",&T);
     while(T--){
-        scanf("%s",&a);
-        scanf("%s",&b);
+        char a[1005] = {'\0'},b[1005] = {'\0'};
+        scanf("%s",a);
+        scanf("%s",b);
+        
         int len = strlen(a);
-        if (strlen(a) != strlen(b)) {
-            printf("No\n");
-            continue;
-        }
+
         int result = is_equivalent (a,b,len);
-        printf ("%s",result);
-        /*if (result ==){
-        printf("Yes\n");
+        if (result){
+        printf("YES\n");
         }
         else {
-        printf("No\n");
-        }*/
+        printf("NO\n");
+        }
     }
 }
 
 
 int is_equivalent(char *a ,char*b ,int len){
-    if (strcmp(a, b) == 0) {
-        return 1;
-    }
-    int mid = len / 2;
-    while (mid > 0){
-        if(mid % 2 == 1){
+   
+    if(len % 2 == 1){
+        return strncmp(a,b,len) == 0;
+        //內建函式比較字串，相等返回0
+        
+    }  
+    else {
+        int mid = len / 2; 
         int case_A = is_equivalent(a, b, mid) && is_equivalent(a + mid, b + mid, mid);
         int case_B = is_equivalent(a, b + mid, mid) && is_equivalent(a + mid, b, mid);
         return case_A || case_B;
-        }  
-        mid /=2;
     }
     
 }
