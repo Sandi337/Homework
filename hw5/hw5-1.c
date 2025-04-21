@@ -4,10 +4,11 @@
 long long x,y,ans;
 int m;
 
+
 int main (){
 
   scanf("%lld %lld %lld",&x , &y, &m);//數值 指數 模數
-  if (y == 0) { // 處理 y = 0
+  if (y == 0) { // 額外處理 y = 0
     printf("%lld\n", 1 % m);
     return 0;
     }
@@ -20,7 +21,7 @@ int main (){
         //對應2進位的位置為1，才會把ans乘x 平方後的模數乘進來再取模數
         ans = (ans * x) % m;//a^2 mod m = ((a % m)*(a % m))% m
     }
-    x = (x * x) % m;
+    x = (x * x) % m;//x 會一直平方取模數(但二進制是0的位置不會累乘進ans)
     y = y / 2;
   }
   printf("%lld",ans);
