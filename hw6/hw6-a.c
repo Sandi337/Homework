@@ -9,8 +9,8 @@ void randomsum(int pos, int sum){
             count++;
             return;   
     }  
-    randomsum(pos + 1,sum);
-    randomsum(pos + 1,sum + a[pos]);
+    randomsum(pos + 1,sum);// 遞迴到下一個位置，不包含當前元素 a[pos] 的和
+    randomsum(pos + 1,sum + a[pos]);// 遞迴到下一個位置，包含當前元素 a[pos] 的和
     
 }
 

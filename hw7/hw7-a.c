@@ -24,7 +24,7 @@ int gcd3(int a, int b){
     }
     return a;
 }
-
+//比對兩個數值的gcd 會比比對三個還要大，在這題的情境中是要找大的gcd
 void solve(){
     scanf("%d",&n);
     for (int i = 0;i <n ; i++){
@@ -33,7 +33,7 @@ void solve(){
     int ans = 0;
     for(int i = 0; i < n; i++){
         for(int j = i+1; j < n; j++){
-            int tmp = gcd3(a[i], a[j]);
+            int tmp = gcd3(a[i], a[j]);//比對兩個數值的gcd
             if(tmp > ans){
                 ans = tmp;
             }

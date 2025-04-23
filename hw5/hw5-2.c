@@ -28,11 +28,13 @@ int main (){
 int is_equivalent(char *a ,char*b ,int len){
    
     if(len % 2 == 1){
+        //odd
         return strncmp(a,b,len) == 0;
         //內建函式比較字串，相等返回0
         
     }  
     else {
+        //even
         int mid = len / 2; 
         int case_A = is_equivalent(a, b, mid) && is_equivalent(a + mid, b + mid, mid);
         int case_B = is_equivalent(a, b + mid, mid) && is_equivalent(a + mid, b, mid);
