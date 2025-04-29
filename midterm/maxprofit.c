@@ -12,6 +12,7 @@ int main(){
 
     for(int i = 1;i < d;i++){
         scanf("%lld",&p[i]);
+        //p[i天]
 
         if (p[i] -p[i-1] > 0){
             n += (p[i] -p[i-1]);
