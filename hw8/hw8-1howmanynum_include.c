@@ -37,6 +37,7 @@ int main(){
     scanf("%d",&n);
     for(int i = 0;i<n;i++) scanf("%d",&a[i]);
     qsort(a, n, sizeof(int), compare_less);
+    // sizeof(a[0]) 等於 sizeof(int)，因為 a[0] 是 int 型態，通常為 4 位元組
     scanf("%d",&q);
     while(q--) {
         scanf("%d", &x);
